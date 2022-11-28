@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+header, footer{
+    height: 20vh;
+    background: burlywood;
+} 
+.container {
+    display: flex;
+}
+main {
+    display: flex;
+    flex: 1; 
+    width: 80vw;
+}
+main > aside {
+    background-color: lightsalmon;
+    order: 2;
+}
+main > article {
+    background-color: lightcoral;
+    flex: 1;
+    order: 1;
+    height: 60vh;
+}
+main aside {
+    flex: 0 0 20vw;
+}
+nav {
+    width: 20vw;
+    background-color: pink;
+}
+header, footer, article, nav, aside {
+    padding: 1em;
+}
