@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+</head>
+<body>
+    <h2>Menghitung Bilangan</h2>
+
+    <form onchange="penjumlahan()">
+    <input type="number" id="angka1">
+    <br>
+    <span>+</span>
+    <br>
+    <input type="number" id="angka2">
+    <br>
+    <span>=</span>
+    <br>
+    <input type="number" id="hasil">
+    </form>
+    <script>
+        function penjumlahan(){
+          let angka1=parseInt(document.getElementById("angka1").value)  
+          let angka2=parseInt(document.getElementById("angka2").value)  
+          let operasi = angka1 + angka2;
+
+          document.getElementById("hasil").value = operasi;
+        }
+    </script>
+</body>
+</html>
