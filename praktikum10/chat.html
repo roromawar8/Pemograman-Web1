@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+    #container {
+        border: 1px solid black;
+        height:50%;
+        width:25%;
+        position: fixed;
+    }
+    #chat {
+        width:100%;
+    }
+    .chat2{
+        display:flex
+    }
+    button {
+        width:50%
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div class="chat" id="user"></div>
+        <div class="chat2">
+            <input type="text" id="chat" onfocus="this.value" />
+        <button onclick="message()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function message(){
+            let elemen, text, text2, spasi;
+            let chat = document.getElementById("chat").value;
+            elemen = document.createElement("span");
+            spasi = document.createElement("br");
+            text = document.createTextNode(chat);
+            elemen.appendChild(text);
+
+            text2 = document.getElementById("user");
+            text2.appendChild(spasi);
+            text2.appendChild(elemen);
+        }
+    </script>
+</body>
+</html>
